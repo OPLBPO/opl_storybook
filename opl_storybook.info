@@ -1,0 +1,5 @@
+name = OPL Storybook
+description = Custom module for the OPL Storybook feature.
+core = 7.x
+package = OPL Custom
+version = 7.x-1.1
