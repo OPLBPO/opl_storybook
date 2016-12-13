@@ -4,6 +4,7 @@
  * Code for the OPL Storybook feature.
  */
 
+include_once 'opl_storybook.features.inc';
 
 /**
  * Implements hook_ctools_plugin_directory()
