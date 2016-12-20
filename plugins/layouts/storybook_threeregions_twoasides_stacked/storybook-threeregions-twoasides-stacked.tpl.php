@@ -3,10 +3,11 @@
     
     <?php if ($content['intro']): ?>
       <section id="page-intro">
+        <?php print $content['intro']; ?>
         <!--
         <div class="background-player">
           <div class="hsContent" data-160-start="opacity: 1" data-750-start="opacity: 0">
-            <?php print $content['intro']; ?>
+            
             <header class="oplfla-header">
               <hgroup>
                 <h1>OPL Food Literacy Main Heading</h1>
