@@ -628,10 +628,37 @@ function opl_storybook_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Storybook';
   $page->admin_description = '';
-  $page->path = 'storybook';
+  $page->path = 'storybook/%book/%chapter';
   $page->access = array();
   $page->menu = array();
-  $page->arguments = array();
+  $page->arguments = array(
+    'book' => array(
+      'id' => 1,
+      'identifier' => 'Taxonomy term: book',
+      'name' => 'term',
+      'settings' => array(
+        'input_form' => 'term',
+        'vocabularies' => array(
+          'storybook' => 'storybook',
+        ),
+        'breadcrumb' => 1,
+        'transform' => 1,
+      ),
+    ),
+    'chapter' => array(
+      'id' => 2,
+      'identifier' => 'Taxonomy term: chapter',
+      'name' => 'term',
+      'settings' => array(
+        'input_form' => 'term',
+        'vocabularies' => array(
+          'storybook' => 'storybook',
+        ),
+        'breadcrumb' => 1,
+        'transform' => 1,
+      ),
+    ),
+  );
   $page->conf = array(
     'admin_paths' => FALSE,
   );
@@ -655,6 +682,99 @@ function opl_storybook_default_page_manager_pages() {
     'contexts' => array(),
     'relationships' => array(),
     'name' => 'panel',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'context_exists',
+          'settings' => array(
+            'exists' => '1',
+          ),
+          'context' => 'argument_term_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'context_exists',
+          'settings' => array(
+            'exists' => '1',
+          ),
+          'context' => 'argument_term_2',
+          'not' => FALSE,
+        ),
+        2 => array(
+          'name' => 'term',
+          'settings' => array(
+            'vid' => '55',
+            30 => array(),
+            52 => array(),
+            37 => array(),
+            38 => array(),
+            40 => array(),
+            39 => array(),
+            44 => array(),
+            46 => array(),
+            42 => array(),
+            45 => array(),
+            43 => array(),
+            49 => array(),
+            53 => array(),
+            50 => array(),
+            21 => array(),
+            11 => array(),
+            47 => array(),
+            51 => array(),
+            48 => array(),
+            55 => array(
+              1834 => '1834',
+            ),
+            54 => array(),
+            31 => array(),
+            41 => array(),
+            27 => array(),
+            4 => array(),
+            29 => array(),
+          ),
+          'context' => 'argument_term_1',
+          'not' => FALSE,
+        ),
+        3 => array(
+          'name' => 'term',
+          'settings' => array(
+            'vid' => '55',
+            30 => array(),
+            52 => array(),
+            37 => array(),
+            38 => array(),
+            40 => array(),
+            39 => array(),
+            44 => array(),
+            46 => array(),
+            42 => array(),
+            45 => array(),
+            43 => array(),
+            49 => array(),
+            53 => array(),
+            50 => array(),
+            21 => array(),
+            11 => array(),
+            47 => array(),
+            51 => array(),
+            48 => array(),
+            55 => array(
+              1835 => '1835',
+            ),
+            54 => array(),
+            31 => array(),
+            41 => array(),
+            27 => array(),
+            4 => array(),
+            29 => array(),
+          ),
+          'context' => 'argument_term_2',
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
   );
   $display = new panels_display();
   $display->layout = 'storybook_threeregions_twoasides_stacked';

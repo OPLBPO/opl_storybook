@@ -1,5 +1,13 @@
 <div class="<?php print $classes ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
   <main id="oplfla-chapters">
+
+    <!-- render the menu for the books -->
+    <?php $menu_view = views_get_view('storybook_terms'); ?>
+    <?php if (is_object($menu_view)): ?>
+      <?php $menu_view->execute(); ?>
+      <?php print $menu_view->render(); ?>
+    <?php endif; ?>
+
     
     <?php if ($content['intro']): ?>
       <section id="page-intro">
