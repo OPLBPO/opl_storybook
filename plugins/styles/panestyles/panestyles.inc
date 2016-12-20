@@ -57,7 +57,7 @@ function theme_panestyles_render_pane($vars) {
 }
 
 function theme_panestyles_render_region($vars) {
-    $content = '';
+  $content = '';
 
   foreach ($vars['panes'] as $pane_id => $pane_output) {
     $content .= $pane_output;
