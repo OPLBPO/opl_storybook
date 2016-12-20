@@ -8,6 +8,9 @@
  * Implements hook_ctools_plugin_api().
  */
 function opl_storybook_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "ds" && $api == "ds") {
+    return array("version" => "1");
+  }
   if ($module == "page_manager" && $api == "pages_default") {
     return array("version" => "1");
   }
@@ -21,6 +24,22 @@ function opl_storybook_ctools_plugin_api($module = NULL, $api = NULL) {
  */
 function opl_storybook_node_info() {
   $items = array(
+    'audio' => array(
+      'name' => t('Audio'),
+      'base' => 'node_content',
+      'description' => t('Publish audio content and transcriptions.'),
+      'has_title' => '1',
+      'title_label' => t('Audio Title'),
+      'help' => '',
+    ),
+    'storybook_article' => array(
+      'name' => t('Storybook Article'),
+      'base' => 'node_content',
+      'description' => t('Publish article for Storybook feature.'),
+      'has_title' => '1',
+      'title_label' => t('Storybook Article'),
+      'help' => '',
+    ),
     'video' => array(
       'name' => t('Video'),
       'base' => 'node_content',
