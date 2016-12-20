@@ -11,10 +11,10 @@ include_once 'opl_storybook.features.inc';
  */
 function opl_storybook_ctools_plugin_directory($module, $plugin) {
   if ($module == "panels" && in_array($plugin, array('layouts', 'styles'))) {
-    return "plugins/$plugin";
+    return "plugins/". $plugin;
   }
 
   if ($module == 'ctools' && !empty($plugin)) {
-    return "plugins/$plugin";
+    return "plugins/". $plugin;
   }
 }
