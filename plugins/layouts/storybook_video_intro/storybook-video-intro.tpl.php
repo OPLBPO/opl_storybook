@@ -1,5 +1,5 @@
 <div>
-  <div class="hsContent" data-160-start="opacity: 1" data-750-start="opacity: 0">
+  <div class="video-intro hsContent" data-160-start="opacity: 1" data-750-start="opacity: 0">
     <header class="oplfla-header">
       <hgroup>
         <?php if ($content['main-heading']): ?>
