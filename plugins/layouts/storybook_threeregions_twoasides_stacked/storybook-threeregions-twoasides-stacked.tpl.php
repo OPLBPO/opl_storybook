@@ -1,14 +1,21 @@
-<div class="<?php print $classes ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
-  <main id="oplfla-chapters">
-
-    <!-- render the menu for the books -->
-    <?php $menu_view = views_get_view('storybook_terms'); ?>
-    <?php if (is_object($menu_view)): ?>
-      <?php $menu_view->execute(); ?>
-      <?php print $menu_view->render(); ?>
-    <?php endif; ?>
-
+<div id="oplfoodliteracyapp" class="<?php print $classes ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
+  
+  <header class="header-top">
+    <div class="top-bar">
+      <a>Logo</a>
+      <div>
+        <!-- render the menu for the books -->
+        <?php $menu_view = views_get_view('storybook_terms'); ?>
+        <?php if (is_object($menu_view)): ?>
+          <?php $menu_view->execute(); ?>
+          <?php print $menu_view->render(); ?>
+        <?php endif; ?>
+      </div>  
+    </div>  
+  </header>  
     
+
+  <main id="oplfla-chapters">  
     <?php if ($content['intro']): ?>
       <section id="page-intro">
         <?php print $content['intro']; ?>
@@ -59,29 +66,10 @@
     <?php if ($content['aside-1']): ?>
 
       <aside class="recipe-list">
-        <div class="container flex">
+        <div class="container">
 
           <?php print $content['aside-1']; ?>
-          <!--<div>
-            <a class="recipe" href="http://www.google.com" data-100-bottom-top="transform: translateX(-200px); opacity: 0" data-center-top="transform: translateX(0px); opacity: 1">
-              <figure>
-                <img src="<?php print base_path() . path_to_theme(); ?>/images/storybook/winter-cooking1.jpeg" alt="Winter cooking"/>
-                <h3>Recipe: Chili</h3>
-              </figure>  
-            </a>
-            <a class="recipe" href="http://www.google.com" data-100-bottom-top="transform: translateY(200px); opacity: 0" data-center-top="transform: translateY(0px); opacity: 1">
-              <figure>  
-                <img src="<?php print base_path() . path_to_theme(); ?>/images/storybook/winter-cooking2.jpg" alt="Winter cooking"/>
-                <h3>Recipe: Chicken</h3>
-              </figure> 
-            </a>
-            <a class="recipe" href="http://www.google.com" data-100-bottom-top="transform: translateX(200px); opacity: 0" data-center-top="transform: translateX(0px); opacity: 1">
-              <figure> 
-                <img src="<?php print base_path() . path_to_theme(); ?>/images/storybook/winter-cooking3.png" alt="Winter cooking"/> 
-                <h3>Recipe: Pasta</h3>
-              </figure> 
-            </a>
-          </div> -->
+
         </div>
       </aside>    
 
@@ -131,44 +119,6 @@
 
           <?php print $content['aside-2']; ?>
 
-          <!-- <div>
-            <a class="collection-item" href="http://www.google.com">
-              <figure>
-                <img src="<?php print base_path() . path_to_theme(); ?>/images/storybook/slow-cooking1.jpg" alt="Winter cooking"/>
-                <figcaption></figcaption>
-              </figure>
-            </a>
-            <a class="collection-item" href="http://www.google.com">
-              <figure>  
-                <img src="<?php print base_path() . path_to_theme(); ?>/images/storybook/slow-cooking2.jpg" alt="Winter cooking"/>
-                <figcaption></figcaption>
-              </figure>
-            </a>
-            <a class="collection-item" href="http://www.google.com">
-              <figure> 
-                <img src="<?php print base_path() . path_to_theme(); ?>/images/storybook/slow-cooking3.jpg" alt="Winter cooking"/>
-                <figcaption></figcaption>
-              </figure>
-            </a>
-            <a class="collection-item" href="http://www.google.com">
-              <figure>  
-                <img src="<?php print base_path() . path_to_theme(); ?>/images/storybook/slow-cooking4.jpg" alt="Winter cooking"/>
-                <figcaption></figcaption>
-              </figure>
-            </a>
-            <a class="collection-item" href="http://www.google.com">
-              <figure> 
-                <img src="<?php print base_path() . path_to_theme(); ?>/images/storybook/slow-cooking5.jpg" alt="Winter cooking"/>
-                <figcaption></figcaption>
-              </figure>
-            </a>
-            <a class="collection-item" href="http://www.google.com">
-              <figure>
-                <img src="<?php print base_path() . path_to_theme(); ?>/images/storybook/slow-cooking1.jpg" alt="Winter cooking"/>
-                <figcaption></figcaption>
-              </figure>
-            </a>
-          </div> -->
         </div>
       </aside>      
 
