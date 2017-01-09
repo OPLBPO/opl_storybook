@@ -18,3 +18,79 @@ function opl_storybook_ctools_plugin_directory($module, $plugin) {
     return "plugins/". $plugin;
   }
 }
+
+/**
+ * Implements hook_field_extra_fields().
+ */
+function opl_storybook_field_extra_fields() {
+  $extra['node']['audio']['display']['transcription_link_audio'] = array(
+    'label' => t('Audio Transcription Link'),
+    'description' => t('Links to new tab with transcription'),
+    'weight' => 0,
+  );
+  $extra['node']['video']['display']['transcription_link_video'] = array(
+    'label' => t('Video Transcription Link'),
+    'description' => t('Links to new tab with transcription'),
+    'weight' => 0,
+  );
+  return $extra;
+}
+
+/**
+ * Implements hook_node_view().
+ */
+function opl_storybook_node_view($node, $view_mode, $langcode) {
+  // Only show the field for node of article type.
+  if ($node->type == 'audio') {
+    $node->content['transcription_link_audio'] = array(
+      '#markup' => l(t('Transcription'), 'node/' . $node->nid, array('attributes' => array('target' => '_blank'), 'fragment' => 'transcription')),
+    );
+  }
+  if ($node->type == 'video') {
+    $node->content['transcription_link_video'] = array(
+      '#markup' => l(t('Transcription'), 'node/' . $node->nid, array('attributes' => array('target' => '_blank'), 'fragment' => 'transcription')),
+    );
+  }  
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function opl_storybook_block_info() {
+
+  $blocks['share_storybook'] = array(
+    'info' => t('Share storybook page with Facebook, Twitter and Google'),
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function opl_storybook_block_view($delta = '') {
+
+  $theme_name = 'oplbootstrap';
+  $block = array();
+
+  switch ($delta) {
+    case 'share_storybook':
+      $link = url(current_path(), array('absolute' => TRUE));
+      $facebooklink = l(t('Share'), 'https://www.facebook.com/sharer/sharer.php', array('query' => array('u=' => $link),'attributes' => array('target' => '_blank')));
+      $twitterlink = l(t('Tweet'), 'https://twitter.com/home', array('query' => array('status' => $link),'attributes' => array('target' => '_blank')));
+
+      $sharecontent = '<ul class="social-media-share">';
+      $sharecontent .= '<li class="share">';
+      $sharecontent .= $facebooklink;
+      $sharecontent .= '</li>';
+      $sharecontent .= '<li class="tweet">';
+      $sharecontent .= $twitterlink;
+      $sharecontent .= '</li>';
+      $sharecontent .= '</ul>';
+
+      $block['content'] = $sharecontent;
+      break;
+
+  }
+  return $block;
+}

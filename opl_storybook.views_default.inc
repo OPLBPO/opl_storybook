@@ -34,15 +34,18 @@ function opl_storybook_views_default_views() {
   $handler->display->display_options['style_options']['grouping'] = array(
     0 => array(
       'field' => 'name_field_1',
-      'rendered' => 1,
+      'rendered' => 0,
       'rendered_strip' => 0,
     ),
   );
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
-  $handler->display->display_options['style_options']['class'] = 'chapter-nav-slider';
-  $handler->display->display_options['style_options']['wrapper_class'] = 'test';
+  $handler->display->display_options['style_options']['class'] = 'dropdown-menu chapter-nav-slider';
+  $handler->display->display_options['style_options']['wrapper_class'] = '';
   $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'name_field_1' => 'name_field_1',
+  );
   /* Relationship: Taxonomy term: Parent term */
   $handler->display->display_options['relationships']['parent']['id'] = 'parent';
   $handler->display->display_options['relationships']['parent']['table'] = 'taxonomy_term_hierarchy';
@@ -55,7 +58,10 @@ function opl_storybook_views_default_views() {
   $handler->display->display_options['fields']['name_field_1']['relationship'] = 'parent';
   $handler->display->display_options['fields']['name_field_1']['label'] = '';
   $handler->display->display_options['fields']['name_field_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['name_field_1']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['name_field_1']['alter']['text'] = '<button>[name_field_1]</button>';
   $handler->display->display_options['fields']['name_field_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name_field_1']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['name_field_1']['link_to_entity'] = 0;
   /* Field: Taxonomy term: Name */
   $handler->display->display_options['fields']['name_field']['id'] = 'name_field';
@@ -82,6 +88,13 @@ function opl_storybook_views_default_views() {
   $handler->display->display_options['filters']['machine_name']['value'] = array(
     'storybook' => 'storybook',
   );
+  /* Filter criterion: Taxonomy term: Publish (field_publish) */
+  $handler->display->display_options['filters']['field_publish_value']['id'] = 'field_publish_value';
+  $handler->display->display_options['filters']['field_publish_value']['table'] = 'field_data_field_publish';
+  $handler->display->display_options['filters']['field_publish_value']['field'] = 'field_publish_value';
+  $handler->display->display_options['filters']['field_publish_value']['value'] = array(
+    1 => '1',
+  );
   $translatables['storybook_terms'] = array(
     t('Master'),
     t('more'),
@@ -91,6 +104,7 @@ function opl_storybook_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('Parent'),
+    t('<button>[name_field_1]</button>'),
   );
   $export['storybook_terms'] = $view;
 

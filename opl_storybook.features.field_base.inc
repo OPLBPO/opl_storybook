@@ -148,6 +148,33 @@ function opl_storybook_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_publish'.
+  $field_bases['field_publish'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_publish',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => 'Not published',
+        1 => 'Published',
+      ),
+      'allowed_values_function' => '',
+      'entity_translation_sync' => FALSE,
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
+  );
+
   // Exported field_base: 'field_secondary_heading'.
   $field_bases['field_secondary_heading'] = array(
     'active' => 1,
