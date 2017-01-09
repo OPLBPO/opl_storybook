@@ -39,18 +39,16 @@ function opl_storybook_field_extra_fields() {
 /**
  * Implements hook_node_view().
  */
-function opl_storybook_node_view($node) {
+function opl_storybook_node_view($node, $view_mode, $langcode) {
   // Only show the field for node of article type.
   if ($node->type == 'audio') {
-    $nodeurl = url('node/' . $node->nid);
     $node->content['transcription_link_audio'] = array(
-      '#markup' => '<a target="_blank" href="' . $nodeurl . '/#transcription">' . t('Transcription') . '</a>',
+      '#markup' => l(t('Transcription'), 'node/' . $node->nid, array('attributes' => array('target' => '_blank'), 'fragment' => 'transcription')),
     );
   }
   if ($node->type == 'video') {
-    $nodeurl = url('node/' . $node->nid);
     $node->content['transcription_link_video'] = array(
-      '#markup' => '<a target="_blank" href="' . $nodeurl . '/#transcription">' . t('Transcription') . '</a>',
+      '#markup' => l(t('Transcription'), 'node/' . $node->nid, array('attributes' => array('target' => '_blank'), 'fragment' => 'transcription')),
     );
   }  
 }
