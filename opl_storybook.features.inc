@@ -42,6 +42,14 @@ function opl_storybook_node_info() {
       'title_label' => t('Audio Title'),
       'help' => '',
     ),
+    'instagram_feed' => array(
+      'name' => t('Instagram Feed'),
+      'base' => 'node_content',
+      'description' => t('Display Instagram feed using LightWidget.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'storybook_article' => array(
       'name' => t('Storybook Article'),
       'base' => 'node_content',
