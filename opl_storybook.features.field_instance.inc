@@ -1074,6 +1074,511 @@ function opl_storybook_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-storybook_collections-body'.
+  $field_instances['node-storybook_collections-body'] = array(
+    'bundle' => 'storybook_collections',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'database_vendor_help_guide' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'database_vendor_link' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resource_title_help' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'simple_grid_view' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'storybook' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'body',
+    'label' => 'Body',
+    'required' => FALSE,
+    'settings' => array(
+      'display_summary' => TRUE,
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 31,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'node-storybook_collections-field_embed_bibliocommons'.
+  $field_instances['node-storybook_collections-field_embed_bibliocommons'] = array(
+    'bundle' => 'storybook_collections',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'database_vendor_help_guide' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'database_vendor_link' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_bclist',
+        'settings' => array(),
+        'type' => 'bclist_default',
+        'weight' => 1,
+      ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resource_title_help' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'simple_grid_view' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'storybook' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_embed_bibliocommons',
+    'label' => 'Insert a BiblioCommons item or list',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_bclist',
+      'settings' => array(
+        'behaviors' => array(
+          'default value' => 2,
+          'multiple values' => 2,
+        ),
+      ),
+      'type' => 'bclist_field',
+      'weight' => 33,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'node-storybook_collections-field_storybook_and_chapter'.
+  $field_instances['node-storybook_collections-field_storybook_and_chapter'] = array(
+    'bundle' => 'storybook_collections',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'database_vendor_help_guide' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'database_vendor_link' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'colorbox_node_classes' => '',
+          'colorbox_node_height' => 600,
+          'colorbox_node_link' => FALSE,
+          'colorbox_node_width' => 600,
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 2,
+      ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resource_title_help' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'simple_grid_view' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'storybook' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_storybook_and_chapter',
+    'label' => 'Storybook and Chapter',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'taxonomy-index' => array(
+          'status' => TRUE,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 35,
+    ),
+  );
+
+  // Exported field_instance: 'node-storybook_single_image-body'.
+  $field_instances['node-storybook_single_image-body'] = array(
+    'bundle' => 'storybook_single_image',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'database_vendor_help_guide' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'database_vendor_link' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resource_title_help' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'simple_grid_view' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'storybook' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'body',
+    'label' => 'Body',
+    'required' => FALSE,
+    'settings' => array(
+      'display_summary' => TRUE,
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'node-storybook_single_image-field_storybook_image'.
+  $field_instances['node-storybook_single_image-field_storybook_image'] = array(
+    'bundle' => 'storybook_single_image',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'database_vendor_help_guide' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'database_vendor_link' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resource_title_help' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'simple_grid_view' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'storybook' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_storybook_image',
+    'label' => 'Storybook Image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 1,
+      'default_image' => 0,
+      'entity_translation_sync' => 0,
+      'file_directory' => 'media_uploads',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'insert' => 1,
+        'insert_absolute' => 0,
+        'insert_class' => 'caption',
+        'insert_default' => 'auto',
+        'insert_styles' => array(
+          'auto' => 'auto',
+          'colorbox__banner' => 0,
+          'colorbox__blog_event_card_image' => 0,
+          'colorbox__blog_teaser_image' => 0,
+          'colorbox__contact_icons' => 0,
+          'colorbox__event' => 0,
+          'colorbox__event_image' => 0,
+          'colorbox__event_series_image' => 0,
+          'colorbox__event_subject_for_browse' => 0,
+          'colorbox__flexslider_full' => 0,
+          'colorbox__flexslider_thumbnail' => 0,
+          'colorbox__juicebox_large' => 0,
+          'colorbox__juicebox_medium' => 0,
+          'colorbox__juicebox_small' => 0,
+          'colorbox__juicebox_square_thumbnail' => 0,
+          'colorbox__large' => 0,
+          'colorbox__media_thumbnail' => 0,
+          'colorbox__medium' => 0,
+          'colorbox__newtitle' => 0,
+          'colorbox__opl_about_the_branch__308_x_180_' => 0,
+          'colorbox__opl_carousel_or_featured_image__350px_x_240px_' => 0,
+          'colorbox__thumbnail' => 0,
+          'icon_link' => 0,
+          'image' => 'image',
+          'image_banner' => 0,
+          'image_blog_event_card_image' => 0,
+          'image_blog_teaser_image' => 0,
+          'image_contact_icons' => 0,
+          'image_event' => 0,
+          'image_event_image' => 0,
+          'image_event_series_image' => 0,
+          'image_event_subject_for_browse' => 0,
+          'image_flexslider_full' => 0,
+          'image_flexslider_thumbnail' => 0,
+          'image_juicebox_large' => 0,
+          'image_juicebox_medium' => 0,
+          'image_juicebox_small' => 0,
+          'image_juicebox_square_thumbnail' => 0,
+          'image_large' => 'image_large',
+          'image_media_thumbnail' => 0,
+          'image_medium' => 'image_medium',
+          'image_newtitle' => 0,
+          'image_opl_about_the_branch__308_x_180_' => 0,
+          'image_opl_carousel_or_featured_image__350px_x_240px_' => 0,
+          'image_thumbnail' => 'image_thumbnail',
+          'link' => 0,
+        ),
+        'insert_width' => '',
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'node-storybook_video_intro-field_main_heading'.
   $field_instances['node-storybook_video_intro-field_main_heading'] = array(
     'bundle' => 'storybook_video_intro',
@@ -2296,6 +2801,105 @@ function opl_storybook_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-storybook-field_image'.
+  $field_instances['taxonomy_term-storybook-field_image'] = array(
+    'bundle' => 'storybook',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 2,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_image',
+    'label' => 'Image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'insert' => 0,
+        'insert_absolute' => 0,
+        'insert_class' => '',
+        'insert_default' => 'auto',
+        'insert_styles' => array(
+          'auto' => 'auto',
+          'colorbox__banner' => 0,
+          'colorbox__blog_event_card_image' => 0,
+          'colorbox__blog_teaser_image' => 0,
+          'colorbox__contact_icons' => 0,
+          'colorbox__event' => 0,
+          'colorbox__event_image' => 0,
+          'colorbox__event_series_image' => 0,
+          'colorbox__event_subject_for_browse' => 0,
+          'colorbox__flexslider_full' => 0,
+          'colorbox__flexslider_thumbnail' => 0,
+          'colorbox__juicebox_large' => 0,
+          'colorbox__juicebox_medium' => 0,
+          'colorbox__juicebox_small' => 0,
+          'colorbox__juicebox_square_thumbnail' => 0,
+          'colorbox__large' => 0,
+          'colorbox__media_thumbnail' => 0,
+          'colorbox__medium' => 0,
+          'colorbox__newtitle' => 0,
+          'colorbox__opl_about_the_branch__308_x_180_' => 0,
+          'colorbox__opl_carousel_or_featured_image__350px_x_240px_' => 0,
+          'colorbox__thumbnail' => 0,
+          'icon_link' => 0,
+          'image' => 0,
+          'image_banner' => 0,
+          'image_blog_event_card_image' => 0,
+          'image_blog_teaser_image' => 0,
+          'image_contact_icons' => 0,
+          'image_event' => 0,
+          'image_event_image' => 0,
+          'image_event_series_image' => 0,
+          'image_event_subject_for_browse' => 0,
+          'image_flexslider_full' => 0,
+          'image_flexslider_thumbnail' => 0,
+          'image_juicebox_large' => 0,
+          'image_juicebox_medium' => 0,
+          'image_juicebox_small' => 0,
+          'image_juicebox_square_thumbnail' => 0,
+          'image_large' => 0,
+          'image_media_thumbnail' => 0,
+          'image_medium' => 0,
+          'image_newtitle' => 0,
+          'image_opl_about_the_branch__308_x_180_' => 0,
+          'image_opl_carousel_or_featured_image__350px_x_240px_' => 0,
+          'image_thumbnail' => 0,
+          'link' => 0,
+        ),
+        'insert_width' => '',
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 33,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-storybook-field_publish'.
   $field_instances['taxonomy_term-storybook-field_publish'] = array(
     'bundle' => 'storybook',
@@ -2308,7 +2912,7 @@ function opl_storybook_field_default_field_instances() {
     'description' => 'Select publish when you are ready to add the chapter to the menu. ',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
@@ -2378,11 +2982,14 @@ function opl_storybook_field_default_field_instances() {
   t('Audio');
   t('Audio Description');
   t('Body');
+  t('Image');
+  t('Insert a BiblioCommons item or list');
   t('Main Heading');
   t('Name');
   t('Publish');
   t('Secondary Heading');
   t('Select publish when you are ready to add the chapter to the menu. ');
+  t('Storybook Image');
   t('Storybook and Chapter');
   t('Title');
   t('Transcription');

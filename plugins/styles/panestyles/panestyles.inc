@@ -72,7 +72,7 @@ function panestyles_settings_form($style_settings) {
 
   $bg_options = array(
     'pane-nobg' => t('No background'),
-    'pane-bglightgrey' => t('Light grey'),
+    'pane-bglightgrey' => t('Light Grey'),
     'pane-bgmedgrey' => t('Medium Grey'),
     'pane-bgdarkgrey' => t('Dark Grey'),
     'pane-bgorange' => t('Orange'),

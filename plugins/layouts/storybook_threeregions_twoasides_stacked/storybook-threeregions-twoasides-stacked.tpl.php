@@ -19,7 +19,7 @@
 
   <?php if ($content['aside-1']): ?>
 
-    <aside id ="aside-1" class="recipe-list animate-region">
+    <aside id ="aside-1" class="storybook-aside animate-region">
       <div class="container">
         <?php print $content['aside-1']; ?>
       </div>
@@ -41,8 +41,8 @@
 
   <?php if ($content['aside-2']): ?>
 
-    <aside id="aside-2" class="collection-list animate-region">
-      <div class="container flex">
+    <aside id="aside-2" class="storybook-aside animate-region">
+      <div class="container">
         <?php print $content['aside-2']; ?>
       </div>
     </aside>      

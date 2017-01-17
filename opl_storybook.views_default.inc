@@ -11,6 +11,118 @@ function opl_storybook_views_default_views() {
   $export = array();
 
   $view = new view();
+  $view->name = 'storybook_audio';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Storybook Audio';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['css_class'] = 'storybook-audio-view-3-stacked';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['row_options']['view_mode'] = 'storybook';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Content: Storybook and Chapter (field_storybook_and_chapter) */
+  $handler->display->display_options['arguments']['field_storybook_and_chapter_target_id']['id'] = 'field_storybook_and_chapter_target_id';
+  $handler->display->display_options['arguments']['field_storybook_and_chapter_target_id']['table'] = 'field_data_field_storybook_and_chapter';
+  $handler->display->display_options['arguments']['field_storybook_and_chapter_target_id']['field'] = 'field_storybook_and_chapter_target_id';
+  $handler->display->display_options['arguments']['field_storybook_and_chapter_target_id']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['field_storybook_and_chapter_target_id']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_storybook_and_chapter_target_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_storybook_and_chapter_target_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_storybook_and_chapter_target_id']['summary_options']['items_per_page'] = '25';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'audio' => 'audio',
+  );
+
+  /* Display: Audio - side by side */
+  $handler = $view->new_display('panel_pane', 'Audio - side by side', 'panel_pane_content_sidebyside');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'storybook-view-sidebyside';
+  $handler->display->display_options['display_description'] = 'Recent audio posts displayed side by side.';
+  $handler->display->display_options['pane_category']['name'] = 'Storybook';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['argument_input'] = array(
+    'field_storybook_and_chapter_target_id' => array(
+      'type' => 'context',
+      'context' => 'entity:taxonomy_term.tid',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: Storybook and Chapter (field_storybook_and_chapter)',
+    ),
+  );
+
+  /* Display: Audio - stacked */
+  $handler = $view->new_display('panel_pane', 'Audio - stacked', 'panel_pane_content_stacked');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'storybook-view-stacked';
+  $handler->display->display_options['display_description'] = 'Recent audio posts displayed one under another.';
+  $handler->display->display_options['pane_category']['name'] = 'Storybook';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['argument_input'] = array(
+    'field_storybook_and_chapter_target_id' => array(
+      'type' => 'context',
+      'context' => 'entity:taxonomy_term.tid',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: Storybook and Chapter (field_storybook_and_chapter)',
+    ),
+  );
+  $translatables['storybook_audio'] = array(
+    t('Master'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('All'),
+    t('Audio - side by side'),
+    t('Recent audio posts displayed side by side.'),
+    t('Storybook'),
+    t('Audio - stacked'),
+    t('Recent audio posts displayed one under another.'),
+  );
+  $export['storybook_audio'] = $view;
+
+  $view = new view();
   $view->name = 'storybook_terms';
   $view->description = '';
   $view->tag = 'default';
@@ -107,6 +219,117 @@ function opl_storybook_views_default_views() {
     t('<button>[name_field_1]</button>'),
   );
   $export['storybook_terms'] = $view;
+
+  $view = new view();
+  $view->name = 'storybook_video';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Storybook Video';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['row_options']['view_mode'] = 'storybook';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Content: Storybook and Chapter (field_storybook_and_chapter) */
+  $handler->display->display_options['arguments']['field_storybook_and_chapter_target_id']['id'] = 'field_storybook_and_chapter_target_id';
+  $handler->display->display_options['arguments']['field_storybook_and_chapter_target_id']['table'] = 'field_data_field_storybook_and_chapter';
+  $handler->display->display_options['arguments']['field_storybook_and_chapter_target_id']['field'] = 'field_storybook_and_chapter_target_id';
+  $handler->display->display_options['arguments']['field_storybook_and_chapter_target_id']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['field_storybook_and_chapter_target_id']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_storybook_and_chapter_target_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_storybook_and_chapter_target_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_storybook_and_chapter_target_id']['summary_options']['items_per_page'] = '25';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'video' => 'video',
+  );
+
+  /* Display: Video - side by side */
+  $handler = $view->new_display('panel_pane', 'Video - side by side', 'panel_pane_content_sidebyside');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'storybook-view-sidebyside';
+  $handler->display->display_options['display_description'] = 'Recent video posts displayed side by side.';
+  $handler->display->display_options['pane_category']['name'] = 'Storybook';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['argument_input'] = array(
+    'field_storybook_and_chapter_target_id' => array(
+      'type' => 'context',
+      'context' => 'entity:taxonomy_term.tid',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: Storybook and Chapter (field_storybook_and_chapter)',
+    ),
+  );
+
+  /* Display: Video - stacked */
+  $handler = $view->new_display('panel_pane', 'Video - stacked', 'panel_pane_content_stacked');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'storybook-view-stacked';
+  $handler->display->display_options['display_description'] = 'Recent video posts displayed one under another.';
+  $handler->display->display_options['pane_category']['name'] = 'Storybook';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['argument_input'] = array(
+    'field_storybook_and_chapter_target_id' => array(
+      'type' => 'context',
+      'context' => 'entity:taxonomy_term.tid',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: Storybook and Chapter (field_storybook_and_chapter)',
+    ),
+  );
+  $translatables['storybook_video'] = array(
+    t('Master'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('All'),
+    t('Video - side by side'),
+    t('Recent video posts displayed side by side.'),
+    t('Storybook'),
+    t('Video - stacked'),
+    t('Recent video posts displayed one under another.'),
+  );
+  $export['storybook_video'] = $view;
 
   return $export;
 }

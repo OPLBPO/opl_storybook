@@ -61,6 +61,15 @@ function opl_storybook_block_info() {
   $blocks['share_storybook'] = array(
     'info' => t('Share storybook page with Facebook, Twitter and Google'),
   );
+  $blocks['chapter_img'] = array(
+    'info' => t('Display thumbnail of taxonomy term'),
+  );
+  $blocks['chapter_title'] = array(
+    'info' => t('Display title of taxonomy term'),
+  );
+  $blocks['view_prev_next'] = array(
+    'info' => t('Display previous and next chapter'),
+  );
 
   return $blocks;
 }
@@ -91,6 +100,100 @@ function opl_storybook_block_view($delta = '') {
       $block['content'] = $sharecontent;
       break;
 
+    case 'chapter_img':
+      
+      $path = drupal_get_path_alias($_GET['q']);
+      $path = explode('/', $path);
+      $terms = taxonomy_get_term_by_name(array_pop($path));
+      $term = reset($terms);
+      $termload = taxonomy_term_load($term->tid); 
+
+      $field_header_image = field_view_field('taxonomy_term',$termload,'field_image',array('label'=>'hidden'));
+
+      $chapter_img_content = '<div>';
+      $chapter_img_content .= render($field_header_image);
+      $chapter_img_content .= '</div>';
+
+      $block['content'] = $chapter_img_content;
+      break; 
+
+    case 'chapter_title':
+      
+      $path = drupal_get_path_alias($_GET['q']);
+      $path = explode('/', $path);
+      $terms = taxonomy_get_term_by_name(array_pop($path));
+      $term = reset($terms);
+      $termload = taxonomy_term_load($term->tid);  
+
+      $name = $termload->name;
+
+      $chapter_title_content = '<h2>';
+      $chapter_title_content .= $name;
+      $chapter_title_content .= '</h2>';
+
+      $block['content'] = $chapter_title_content;
+      break; 
+
+    case 'view_prev_next': 
+      $path = drupal_get_path_alias($_GET['q']);
+      $path = explode('/', $path);
+      $terms = taxonomy_get_term_by_name(array_pop($path));
+      $term = reset($terms);
+      $termload = taxonomy_term_load($term->tid);
+      $name = $term->name;
+      $vid = $term->vid;
+      
+      $treeterms = taxonomy_get_tree($term->vid);
+
+      $chapterindex = 0;
+      
+      foreach ($treeterms as $key=>$value) {
+        if ($value->name == $term->name) {
+          $chapterindex = $key;
+          break;
+        }
+      }
+
+      $chapterparent = $treeterms[$chapterindex]->parents[0];
+
+      $chapterparentindex = 0;
+
+      foreach ($treeterms as $key=>$value) {
+        if ($value->tid == $chapterparent) {
+          $chapterparentindex = $key;
+          break;
+        }
+      }
+
+      $chapterparentname = $treeterms[$chapterparentindex]->name;
+      
+      $prevchapterid = $treeterms[$chapterindex -1]->tid;
+      $prevchapterparent = $treeterms[$chapterindex -1]->parents[0];
+      $prevchaptername = $treeterms[$chapterindex -1]->name;
+      
+      $nextchapterid = $treeterms[$chapterindex +1]->tid;
+      $nextchapterparent = $treeterms[$chapterindex +1]->parents[0];
+      $nextchaptername = $treeterms[$chapterindex +1]->name;
+
+      $prevlink = l(t($prevchaptername), 'storybook/' . $chapterparentname . '/' . $prevchaptername);
+      $nextlink = l(t($nextchaptername), 'storybook/' . $chapterparentname . '/' . $nextchaptername);
+
+
+      $view_prev_next_content = '';
+
+      if( isset($prevchapterid) &&  ($chapterparent == $prevchapterparent) ){
+        $view_prev_next_content .= '<div class="view-previous"><p>' . t('View Previous') . '</p><p>' . $prevlink . '</p></div>';
+      }
+
+      if( isset($nextchapterid) &&  ($chapterparent == $nextchapterparent) ){
+        $view_prev_next_content .= '<div class="view-next"><p>' . t('View Next') . '</p><p>' . $nextlink . '</p></div>';
+      }
+
+      $block['content'] = $view_prev_next_content;
+      break;  
   }
   return $block;
 }
+
+
+
