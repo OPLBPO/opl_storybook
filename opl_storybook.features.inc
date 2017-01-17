@@ -58,6 +58,22 @@ function opl_storybook_node_info() {
       'title_label' => t('Storybook Article'),
       'help' => '',
     ),
+    'storybook_collections' => array(
+      'name' => t('Storybook Collections'),
+      'base' => 'node_content',
+      'description' => t('Publish collections relevant to the Storybook chapter.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'storybook_single_image' => array(
+      'name' => t('Storybook Single Image'),
+      'base' => 'node_content',
+      'description' => t('Publish single image with or without caption.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'storybook_video_intro' => array(
       'name' => t('Storybook Video Intro'),
       'base' => 'node_content',
