@@ -200,7 +200,7 @@ function opl_storybook_block_view($delta = '') {
  */
 function opl_storybook_module_implements_alter(&$implementations, $hook) {
   if ($hook == 'theme_registry_alter') {
-    //unset($implementations['image_field_caption']);
+    unset($implementations['image_field_caption']);
   }
 }
 
