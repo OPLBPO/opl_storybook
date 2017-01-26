@@ -68,6 +68,14 @@ function theme_panestyles_render_region($vars) {
   return theme('panestyles_theme_region', array('content' => $content));
 }
 
+/**
+ *  Submit handler for admin form.
+ */
+function panestyles_settings_form_submit($form, &$form_state) {
+ $form_state['conf'] = $form_state['values']['settings'];
+}
+
+
 function panestyles_settings_form($style_settings) {
 
   $bg_options = array(

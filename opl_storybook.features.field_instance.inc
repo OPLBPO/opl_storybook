@@ -69,7 +69,7 @@ function opl_storybook_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -100,8 +100,8 @@ function opl_storybook_field_default_field_instances() {
       'description_field' => 0,
       'entity_translation_sync' => 0,
       'file_directory' => 'media_uploads',
-      'file_extensions' => 'mpeg ogg wav',
-      'max_filesize' => '',
+      'file_extensions' => 'mpeg ogg wav mp3',
+      'max_filesize' => '6 MB',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -130,6 +130,8 @@ function opl_storybook_field_default_field_instances() {
           'colorbox__newtitle' => 0,
           'colorbox__opl_about_the_branch__308_x_180_' => 0,
           'colorbox__opl_carousel_or_featured_image__350px_x_240px_' => 0,
+          'colorbox__single_event_blog_' => 0,
+          'colorbox__square_thumbnail' => 0,
           'colorbox__thumbnail' => 0,
           'icon_link' => 0,
           'image' => 0,
@@ -149,6 +151,8 @@ function opl_storybook_field_default_field_instances() {
           'image_newtitle' => 0,
           'image_opl_about_the_branch__308_x_180_' => 0,
           'image_opl_carousel_or_featured_image__350px_x_240px_' => 0,
+          'image_single_event_blog_' => 0,
+          'image_square_thumbnail' => 0,
           'image_thumbnail' => 0,
           'link' => 0,
         ),
@@ -214,7 +218,7 @@ function opl_storybook_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -361,7 +365,7 @@ function opl_storybook_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -453,7 +457,7 @@ function opl_storybook_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -594,7 +598,7 @@ function opl_storybook_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -682,6 +686,12 @@ function opl_storybook_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'storybook' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -708,6 +718,7 @@ function opl_storybook_field_default_field_instances() {
           9 => 0,
           10 => 0,
           'blog_teaser_field' => 0,
+          'full_html_no_editor_' => 0,
           'image_only' => 0,
           'newcomers_full_html' => 'newcomers_full_html',
           'storybook' => 0,
@@ -740,6 +751,9 @@ function opl_storybook_field_default_field_instances() {
             'blog_teaser_field' => array(
               'weight' => 0,
             ),
+            'full_html_no_editor_' => array(
+              'weight' => 0,
+            ),
             'image_only' => array(
               'weight' => -9,
             ),
@@ -761,11 +775,153 @@ function opl_storybook_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 5,
+        'rows' => 3,
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
       'weight' => 31,
+    ),
+  );
+
+  // Exported field_instance: 'node-instagram_feed-field_instagram_account'.
+  $field_instances['node-instagram_feed-field_instagram_account'] = array(
+    'bundle' => 'instagram_feed',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'database_vendor_help_guide' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'database_vendor_link' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resource_title_help' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'simple_grid_view' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'storybook' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_instagram_account',
+    'label' => 'Follow us on Instagram',
+    'required' => 1,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          1 => 1,
+          2 => 2,
+          3 => 3,
+          4 => 4,
+          5 => 5,
+          9 => 9,
+          10 => 10,
+          'blog_teaser_field' => 'blog_teaser_field',
+          'full_html_no_editor_' => 'full_html_no_editor_',
+          'image_only' => 'image_only',
+          'newcomers_full_html' => 'newcomers_full_html',
+          'storybook' => 'storybook',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            1 => array(
+              'weight' => -8,
+            ),
+            2 => array(
+              'weight' => -10,
+            ),
+            3 => array(
+              'weight' => -7,
+            ),
+            4 => array(
+              'weight' => -6,
+            ),
+            5 => array(
+              'weight' => -5,
+            ),
+            9 => array(
+              'weight' => -4,
+            ),
+            10 => array(
+              'weight' => -3,
+            ),
+            'blog_teaser_field' => array(
+              'weight' => 0,
+            ),
+            'full_html_no_editor_' => array(
+              'weight' => 0,
+            ),
+            'image_only' => array(
+              'weight' => -9,
+            ),
+            'newcomers_full_html' => array(
+              'weight' => 0,
+            ),
+            'storybook' => array(
+              'weight' => 0,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 32,
     ),
   );
 
@@ -818,6 +974,12 @@ function opl_storybook_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'storybook' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -845,6 +1007,788 @@ function opl_storybook_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => -5,
+    ),
+  );
+
+  // Exported field_instance: 'node-recipe-body'.
+  $field_instances['node-recipe-body'] = array(
+    'bundle' => 'recipe',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Please describe how to prepare this dish with step-by-step instructions. ',
+    'display' => array(
+      'database_vendor_help_guide' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'database_vendor_link' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resource_title_help' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'simple_grid_view' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'storybook' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'body',
+    'label' => 'Preparation',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          1 => 1,
+          2 => 2,
+          3 => 3,
+          4 => 4,
+          5 => 5,
+          9 => 9,
+          10 => 10,
+          'blog_teaser_field' => 'blog_teaser_field',
+          'full_html_no_editor_' => 'full_html_no_editor_',
+          'image_only' => 'image_only',
+          'newcomers_full_html' => 'newcomers_full_html',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            1 => array(
+              'weight' => -8,
+            ),
+            2 => array(
+              'weight' => -10,
+            ),
+            3 => array(
+              'weight' => -7,
+            ),
+            4 => array(
+              'weight' => -6,
+            ),
+            5 => array(
+              'weight' => -5,
+            ),
+            9 => array(
+              'weight' => -4,
+            ),
+            10 => array(
+              'weight' => -3,
+            ),
+            'blog_teaser_field' => array(
+              'weight' => 0,
+            ),
+            'full_html_no_editor_' => array(
+              'weight' => 0,
+            ),
+            'image_only' => array(
+              'weight' => -9,
+            ),
+            'newcomers_full_html' => array(
+              'weight' => 0,
+            ),
+          ),
+        ),
+      ),
+      'display_summary' => 0,
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-recipe-field_ingredients'.
+  $field_instances['node-recipe-field_ingredients'] = array(
+    'bundle' => 'recipe',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Please enter each ingredient separately, including a quantity and measurement (either metric or imperial is fine, but please be consistent). You may add as many ingredients as you need.',
+    'display' => array(
+      'database_vendor_help_guide' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'database_vendor_link' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resource_title_help' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'simple_grid_view' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'storybook' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_ingredients',
+    'label' => 'Ingredients',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          1 => 1,
+          2 => 2,
+          3 => 3,
+          4 => 4,
+          5 => 5,
+          9 => 9,
+          10 => 10,
+          'blog_teaser_field' => 'blog_teaser_field',
+          'full_html_no_editor_' => 'full_html_no_editor_',
+          'image_only' => 'image_only',
+          'newcomers_full_html' => 'newcomers_full_html',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            1 => array(
+              'weight' => -8,
+            ),
+            2 => array(
+              'weight' => -10,
+            ),
+            3 => array(
+              'weight' => -7,
+            ),
+            4 => array(
+              'weight' => -6,
+            ),
+            5 => array(
+              'weight' => -5,
+            ),
+            9 => array(
+              'weight' => -4,
+            ),
+            10 => array(
+              'weight' => -3,
+            ),
+            'blog_teaser_field' => array(
+              'weight' => 0,
+            ),
+            'full_html_no_editor_' => array(
+              'weight' => 0,
+            ),
+            'image_only' => array(
+              'weight' => -9,
+            ),
+            'newcomers_full_html' => array(
+              'weight' => 0,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-recipe-field_recipe_photo'.
+  $field_instances['node-recipe-field_recipe_photo'] = array(
+    'bundle' => 'recipe',
+    'deleted' => 0,
+    'description' => 'If you have a photo of the finished product, you may upload it here. ',
+    'display' => array(
+      'database_vendor_help_guide' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'database_vendor_link' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 5,
+      ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resource_title_help' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'simple_grid_view' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'storybook' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_recipe_photo',
+    'label' => 'Photo of completed recipe',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => 'recipe_photos',
+      'file_extensions' => 'png gif jpg jpeg',
+      'image_field_caption' => 0,
+      'max_filesize' => '2 MB',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'insert' => 0,
+        'insert_absolute' => 0,
+        'insert_class' => '',
+        'insert_default' => 'auto',
+        'insert_styles' => array(
+          'auto' => 'auto',
+          'colorbox__banner' => 0,
+          'colorbox__blog_event_card_image' => 0,
+          'colorbox__blog_teaser_image' => 0,
+          'colorbox__contact_icons' => 0,
+          'colorbox__event' => 0,
+          'colorbox__event_image' => 0,
+          'colorbox__event_series_image' => 0,
+          'colorbox__event_subject_for_browse' => 0,
+          'colorbox__flexslider_full' => 0,
+          'colorbox__flexslider_thumbnail' => 0,
+          'colorbox__large' => 0,
+          'colorbox__media_thumbnail' => 0,
+          'colorbox__medium' => 0,
+          'colorbox__newtitle' => 0,
+          'colorbox__opl_about_the_branch__308_x_180_' => 0,
+          'colorbox__opl_carousel_or_featured_image__350px_x_240px_' => 0,
+          'colorbox__thumbnail' => 0,
+          'icon_link' => 0,
+          'image' => 0,
+          'image_banner' => 0,
+          'image_blog_event_card_image' => 0,
+          'image_blog_teaser_image' => 0,
+          'image_contact_icons' => 0,
+          'image_event' => 0,
+          'image_event_image' => 0,
+          'image_event_series_image' => 0,
+          'image_event_subject_for_browse' => 0,
+          'image_flexslider_full' => 0,
+          'image_flexslider_thumbnail' => 0,
+          'image_large' => 0,
+          'image_media_thumbnail' => 0,
+          'image_medium' => 0,
+          'image_newtitle' => 0,
+          'image_opl_about_the_branch__308_x_180_' => 0,
+          'image_opl_carousel_or_featured_image__350px_x_240px_' => 0,
+          'image_thumbnail' => 0,
+          'link' => 0,
+        ),
+        'insert_width' => '',
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-recipe-field_total_preparation_time'.
+  $field_instances['node-recipe-field_total_preparation_time'] = array(
+    'bundle' => 'recipe',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Please indicate the total preparation and cooking time in minutes or hours, as appropriate.',
+    'display' => array(
+      'database_vendor_help_guide' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'database_vendor_link' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resource_title_help' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'simple_grid_view' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'storybook' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_total_preparation_time',
+    'label' => 'Total time required',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          1 => 1,
+          2 => 2,
+          3 => 3,
+          4 => 4,
+          5 => 5,
+          9 => 9,
+          10 => 10,
+          'blog_teaser_field' => 'blog_teaser_field',
+          'full_html_no_editor_' => 'full_html_no_editor_',
+          'image_only' => 'image_only',
+          'newcomers_full_html' => 'newcomers_full_html',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            1 => array(
+              'weight' => -8,
+            ),
+            2 => array(
+              'weight' => -10,
+            ),
+            3 => array(
+              'weight' => -7,
+            ),
+            4 => array(
+              'weight' => -6,
+            ),
+            5 => array(
+              'weight' => -5,
+            ),
+            9 => array(
+              'weight' => -4,
+            ),
+            10 => array(
+              'weight' => -3,
+            ),
+            'blog_teaser_field' => array(
+              'weight' => 0,
+            ),
+            'full_html_no_editor_' => array(
+              'weight' => 0,
+            ),
+            'image_only' => array(
+              'weight' => -9,
+            ),
+            'newcomers_full_html' => array(
+              'weight' => 0,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 50,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-recipe-field_yield'.
+  $field_instances['node-recipe-field_yield'] = array(
+    'bundle' => 'recipe',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Please enter an amount, such as "12 muffins" or "4 servings."',
+    'display' => array(
+      'database_vendor_help_guide' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'database_vendor_link' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resource_title_help' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'simple_grid_view' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'storybook' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_yield',
+    'label' => 'Yield',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          1 => 1,
+          2 => 2,
+          3 => 3,
+          4 => 4,
+          5 => 5,
+          9 => 9,
+          10 => 10,
+          'blog_teaser_field' => 'blog_teaser_field',
+          'full_html_no_editor_' => 'full_html_no_editor_',
+          'image_only' => 'image_only',
+          'newcomers_full_html' => 'newcomers_full_html',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            1 => array(
+              'weight' => -8,
+            ),
+            2 => array(
+              'weight' => -10,
+            ),
+            3 => array(
+              'weight' => -7,
+            ),
+            4 => array(
+              'weight' => -6,
+            ),
+            5 => array(
+              'weight' => -5,
+            ),
+            9 => array(
+              'weight' => -4,
+            ),
+            10 => array(
+              'weight' => -3,
+            ),
+            'blog_teaser_field' => array(
+              'weight' => 0,
+            ),
+            'full_html_no_editor_' => array(
+              'weight' => 0,
+            ),
+            'image_only' => array(
+              'weight' => -9,
+            ),
+            'newcomers_full_html' => array(
+              'weight' => 0,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-recipe-title_field'.
+  $field_instances['node-recipe-title_field'] = array(
+    'bundle' => 'recipe',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'database_vendor_help_guide' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'database_vendor_link' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resource_title_help' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'simple_grid_view' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'storybook' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'title_field',
+    'label' => 'Title',
+    'required' => TRUE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'hide_label' => array(
+        'entity' => 0,
+        'page' => 0,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 0,
     ),
   );
 
@@ -1074,93 +2018,6 @@ function opl_storybook_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-storybook_collections-body'.
-  $field_instances['node-storybook_collections-body'] = array(
-    'bundle' => 'storybook_collections',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'database_vendor_help_guide' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'database_vendor_link' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'featured_event' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'resource_title_help' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'search_result' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'simple_grid_view' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'storybook' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'Body',
-    'required' => FALSE,
-    'settings' => array(
-      'display_summary' => TRUE,
-      'entity_translation_sync' => FALSE,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 31,
-    ),
-  );
-
   // Exported field_instance:
   // 'node-storybook_collections-field_embed_bibliocommons'.
   $field_instances['node-storybook_collections-field_embed_bibliocommons'] = array(
@@ -1341,92 +2198,6 @@ function opl_storybook_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-storybook_single_image-body'.
-  $field_instances['node-storybook_single_image-body'] = array(
-    'bundle' => 'storybook_single_image',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'database_vendor_help_guide' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'database_vendor_link' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'default' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 1,
-      ),
-      'featured_event' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'resource_title_help' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'search_result' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'simple_grid_view' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'storybook' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'Body',
-    'required' => FALSE,
-    'settings' => array(
-      'display_summary' => TRUE,
-      'entity_translation_sync' => FALSE,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 5,
-    ),
-  );
-
   // Exported field_instance:
   // 'node-storybook_single_image-field_storybook_image'.
   $field_instances['node-storybook_single_image-field_storybook_image'] = array(
@@ -1501,13 +2272,14 @@ function opl_storybook_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_storybook_image',
     'label' => 'Storybook Image',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
       'entity_translation_sync' => 0,
       'file_directory' => 'media_uploads',
       'file_extensions' => 'png gif jpg jpeg',
+      'image_field_caption' => 1,
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
@@ -1520,7 +2292,7 @@ function opl_storybook_field_default_field_instances() {
       'settings' => array(
         'insert' => 1,
         'insert_absolute' => 0,
-        'insert_class' => 'caption',
+        'insert_class' => '',
         'insert_default' => 'auto',
         'insert_styles' => array(
           'auto' => 'auto',
@@ -1534,16 +2306,14 @@ function opl_storybook_field_default_field_instances() {
           'colorbox__event_subject_for_browse' => 0,
           'colorbox__flexslider_full' => 0,
           'colorbox__flexslider_thumbnail' => 0,
-          'colorbox__juicebox_large' => 0,
-          'colorbox__juicebox_medium' => 0,
-          'colorbox__juicebox_small' => 0,
-          'colorbox__juicebox_square_thumbnail' => 0,
           'colorbox__large' => 0,
           'colorbox__media_thumbnail' => 0,
           'colorbox__medium' => 0,
           'colorbox__newtitle' => 0,
           'colorbox__opl_about_the_branch__308_x_180_' => 0,
           'colorbox__opl_carousel_or_featured_image__350px_x_240px_' => 0,
+          'colorbox__single_event_blog_' => 0,
+          'colorbox__square_thumbnail' => 0,
           'colorbox__thumbnail' => 0,
           'icon_link' => 0,
           'image' => 'image',
@@ -1557,16 +2327,14 @@ function opl_storybook_field_default_field_instances() {
           'image_event_subject_for_browse' => 0,
           'image_flexslider_full' => 0,
           'image_flexslider_thumbnail' => 0,
-          'image_juicebox_large' => 0,
-          'image_juicebox_medium' => 0,
-          'image_juicebox_small' => 0,
-          'image_juicebox_square_thumbnail' => 0,
           'image_large' => 'image_large',
           'image_media_thumbnail' => 0,
           'image_medium' => 'image_medium',
           'image_newtitle' => 0,
           'image_opl_about_the_branch__308_x_180_' => 0,
           'image_opl_carousel_or_featured_image__350px_x_240px_' => 0,
+          'image_single_event_blog_' => 0,
+          'image_square_thumbnail' => 0,
           'image_thumbnail' => 'image_thumbnail',
           'link' => 0,
         ),
@@ -1576,6 +2344,91 @@ function opl_storybook_field_default_field_instances() {
       ),
       'type' => 'image_image',
       'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-storybook_single_image-title_field'.
+  $field_instances['node-storybook_single_image-title_field'] = array(
+    'bundle' => 'storybook_single_image',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'database_vendor_help_guide' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'database_vendor_link' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resource_title_help' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'simple_grid_view' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'storybook' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'title_field',
+    'label' => 'Title',
+    'required' => TRUE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'hide_label' => array(
+        'entity' => 0,
+        'page' => 0,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -5,
     ),
   );
 
@@ -2139,7 +2992,7 @@ function opl_storybook_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2231,7 +3084,7 @@ function opl_storybook_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -2380,7 +3233,7 @@ function opl_storybook_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -2528,7 +3381,7 @@ function opl_storybook_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -2672,7 +3525,7 @@ function opl_storybook_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -2769,7 +3622,7 @@ function opl_storybook_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2829,6 +3682,7 @@ function opl_storybook_field_default_field_instances() {
       'entity_translation_sync' => FALSE,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
+      'image_field_caption' => 0,
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
@@ -2982,19 +3836,30 @@ function opl_storybook_field_default_field_instances() {
   t('Audio');
   t('Audio Description');
   t('Body');
+  t('Follow us on Instagram');
+  t('If you have a photo of the finished product, you may upload it here. ');
   t('Image');
+  t('Ingredients');
   t('Insert a BiblioCommons item or list');
   t('Main Heading');
   t('Name');
+  t('Photo of completed recipe');
+  t('Please describe how to prepare this dish with step-by-step instructions. ');
+  t('Please enter an amount, such as "12 muffins" or "4 servings."');
+  t('Please enter each ingredient separately, including a quantity and measurement (either metric or imperial is fine, but please be consistent). You may add as many ingredients as you need.');
+  t('Please indicate the total preparation and cooking time in minutes or hours, as appropriate.');
+  t('Preparation');
   t('Publish');
   t('Secondary Heading');
   t('Select publish when you are ready to add the chapter to the menu. ');
   t('Storybook Image');
   t('Storybook and Chapter');
   t('Title');
+  t('Total time required');
   t('Transcription');
   t('Video');
   t('Video Description');
+  t('Yield');
   t('YouTube Video');
 
   return $field_instances;
