@@ -125,6 +125,52 @@ function opl_storybook_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_ingredients'.
+  $field_bases['field_ingredients'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_ingredients',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max_length' => 255,
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 1,
+    'type' => 'text',
+  );
+
+  // Exported field_base: 'field_instagram_account'.
+  $field_bases['field_instagram_account'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_instagram_account',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max_length' => 255,
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 1,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_main_heading'.
   $field_bases['field_main_heading'] = array(
     'active' => 1,
@@ -173,6 +219,32 @@ function opl_storybook_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'list_boolean',
+  );
+
+  // Exported field_base: 'field_recipe_photo'.
+  $field_bases['field_recipe_photo'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_recipe_photo',
+    'indexes' => array(
+      'fid' => array(
+        0 => 'fid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'image',
+    'settings' => array(
+      'default_image' => 0,
+      'entity_translation_sync' => array(
+        0 => 'fid',
+      ),
+      'profile2_private' => FALSE,
+      'uri_scheme' => 'public',
+    ),
+    'translatable' => 0,
+    'type' => 'image',
   );
 
   // Exported field_base: 'field_secondary_heading'.
@@ -264,6 +336,29 @@ function opl_storybook_field_default_field_bases() {
     'type' => 'image',
   );
 
+  // Exported field_base: 'field_total_preparation_time'.
+  $field_bases['field_total_preparation_time'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_total_preparation_time',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max_length' => 50,
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 1,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_transcription'.
   $field_bases['field_transcription'] = array(
     'active' => 1,
@@ -333,6 +428,29 @@ function opl_storybook_field_default_field_bases() {
     ),
     'translatable' => 1,
     'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_yield'.
+  $field_bases['field_yield'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_yield',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max_length' => 255,
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 1,
+    'type' => 'text',
   );
 
   // Exported field_base: 'field_youtube_video'.

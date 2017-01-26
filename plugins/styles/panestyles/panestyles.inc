@@ -68,7 +68,8 @@ function theme_panestyles_render_region($vars) {
   return theme('panestyles_theme_region', array('content' => $content));
 }
 
-function panestyles_settings_form($style_settings) {
+function panestyles_settings_form($style_settings, $display, $pid, $type, $form_state) {
+  $form = array();
 
   $bg_options = array(
     'pane-nobg' => t('No background'),
