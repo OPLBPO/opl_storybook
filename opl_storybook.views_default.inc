@@ -157,12 +157,26 @@ function opl_storybook_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['inline'] = array(
     'name_field_1' => 'name_field_1',
+    'field_image' => 'field_image',
   );
   /* Relationship: Taxonomy term: Parent term */
   $handler->display->display_options['relationships']['parent']['id'] = 'parent';
   $handler->display->display_options['relationships']['parent']['table'] = 'taxonomy_term_hierarchy';
   $handler->display->display_options['relationships']['parent']['field'] = 'parent';
   $handler->display->display_options['relationships']['parent']['required'] = TRUE;
+  /* Field: Field: Image */
+  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['relationship'] = 'parent';
+  $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+  );
   /* Field: Taxonomy term: Name */
   $handler->display->display_options['fields']['name_field_1']['id'] = 'name_field_1';
   $handler->display->display_options['fields']['name_field_1']['table'] = 'field_data_name_field';
@@ -171,7 +185,7 @@ function opl_storybook_views_default_views() {
   $handler->display->display_options['fields']['name_field_1']['label'] = '';
   $handler->display->display_options['fields']['name_field_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['name_field_1']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['name_field_1']['alter']['text'] = '<button>[name_field_1]</button>';
+  $handler->display->display_options['fields']['name_field_1']['alter']['text'] = '<button>[field_image] [name_field_1]</button>';
   $handler->display->display_options['fields']['name_field_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['name_field_1']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['name_field_1']['link_to_entity'] = 0;
@@ -216,7 +230,7 @@ function opl_storybook_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('Parent'),
-    t('<button>[name_field_1]</button>'),
+    t('<button>[field_image] [name_field_1]</button>'),
   );
   $export['storybook_terms'] = $view;
 

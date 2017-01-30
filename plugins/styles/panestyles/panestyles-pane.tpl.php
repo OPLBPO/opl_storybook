@@ -18,7 +18,7 @@
 
 ?>
 
-<div class="panel-pane <?php print $classes; ?> <?php print (isset($settings['bg_fieldset']['bg_classes'])) ? $settings['bg_fieldset']['bg_classes'] : 'pane-nobg';?> <?php print (isset($settings['border_fieldset']['border_classes'])) ? $settings['border_fieldset']['border_classes'] : 'pane-noborder';?> <?php print (isset($settings['border_color_fieldset']['border_color_classes'])) ? $settings['border_color_fieldset']['border_color_classes'] : 'pane-nobordercolor';?> <?php print (isset($settings['width_fieldset']['width_classes'])) ? $settings['width_fieldset']['width_classes'] : 'pane-width100';?> <?php print (isset($settings['animation_fieldset']['animation_classes'])) ? $settings['animation_fieldset']['animation_classes'] : 'pane-noanimation';?>">
+<div class="panel-pane <?php print $classes; ?> <?php print (isset($settings['bg_fieldset']['bg_classes'])) ? $settings['bg_fieldset']['bg_classes'] : 'pane-nobg';?> <?php print (isset($settings['border_fieldset']['border_classes'])) ? $settings['border_fieldset']['border_classes'] : 'pane-noborder';?> <?php print (isset($settings['border_color_fieldset']['border_color_classes'])) ? $settings['border_color_fieldset']['border_color_classes'] : 'pane-nobordercolor';?> <?php print (isset($settings['width_fieldset']['width_classes'])) ? $settings['width_fieldset']['width_classes'] : 'pane-width100';?> <?php print (isset($settings['padding_fieldset']['padding_classes'])) ? $settings['padding_fieldset']['padding_classes'] : 'pane-nopadding';?> <?php print (isset($settings['animation_fieldset']['animation_classes'])) ? $settings['animation_fieldset']['animation_classes'] : 'pane-noanimation';?>">
 
   <div class="pane-content">
     <?php print render($content->content); ?>
