@@ -77,7 +77,7 @@ function opl_storybook_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_mode_audio';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['comment_default_mode_audio'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -252,7 +252,7 @@ function opl_storybook_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_audio';
-  $strongarm->value = '0';
+  $strongarm->value = 2;
   $export['comment_preview_audio'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -1079,14 +1079,16 @@ function opl_storybook_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_video';
-  $strongarm->value = '4';
+  $strongarm->value = '0';
   $export['language_content_type_video'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_audio';
-  $strongarm->value = array();
+  $strongarm->value = array(
+    0 => 'main-menu',
+  );
   $export['menu_options_audio'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -1220,7 +1222,6 @@ function opl_storybook_strongarm() {
   $strongarm->name = 'node_options_recipe';
   $strongarm->value = array(
     0 => 'status',
-    1 => 'promote',
   );
   $export['node_options_recipe'] = $strongarm;
 
@@ -1266,6 +1267,7 @@ function opl_storybook_strongarm() {
   $strongarm->name = 'node_options_video';
   $strongarm->value = array(
     0 => 'status',
+    1 => 'promote',
   );
   $export['node_options_video'] = $strongarm;
 
@@ -1273,7 +1275,7 @@ function opl_storybook_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_audio';
-  $strongarm->value = '1';
+  $strongarm->value = 1;
   $export['node_preview_audio'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -1343,7 +1345,7 @@ function opl_storybook_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_recipe';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['node_submitted_recipe'] = $strongarm;
 
   $strongarm = new stdClass();

@@ -100,6 +100,13 @@ function panestyles_settings_form($style_settings, $display, $pid, $type, $form_
     'pane-borderyellow' => t('Yellow')
   );
 
+  $padding_options = array(
+    'pane-nopadding' => t('No padding'),
+    'pane-topbottompadding' => t('Top and bottom padding'),
+    'pane-toppadding' => t('Top padding'),
+    'pane-bottompadding' => t('Bottom padding')
+  );
+
   $width_options = array(
     'pane-width100' => t('Width: 100%'),
     'pane-width66left' => t('Width: 2/3 of page on left'),
@@ -180,6 +187,21 @@ function panestyles_settings_form($style_settings, $display, $pid, $type, $form_
     '#options' => $width_options,
     '#required' => FALSE,
     '#default_value' => (isset($style_settings['width_fieldset']['width_classes'])) ? $style_settings['width_fieldset']['width_classes'] : 'pane-width100',
+  );
+
+  $form['padding_fieldset'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Padding'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+ 
+  $form['padding_fieldset']['padding_classes'] = array(
+    '#type' => 'radios',
+    '#description' => t('Choose a padding for your panel pane.'),
+    '#options' => $padding_options,
+    '#required' => FALSE,
+    '#default_value' => (isset($style_settings['padding_fieldset']['padding_classes'])) ? $style_settings['padding_fieldset']['padding_classes'] : 'pane-nopadding',
   );
 
   $form['animation_fieldset'] = array(

@@ -59,14 +59,4 @@
     </section>      
 
   <?php endif ?>
-
-
-  <?php if ($content['footer']): ?>
-
-    <footer id="storybook-footer" class="animate-region">
-      <?php print $content['footer']; ?>
-    </footer>
-
-  <?php endif ?>
-
 </main>

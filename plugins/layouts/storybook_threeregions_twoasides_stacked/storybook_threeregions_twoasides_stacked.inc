@@ -16,6 +16,5 @@ $plugin = array(
     'region-3' => t('Region Three'),
     'aside-1' => t('Aside One'),
     'aside-2' => t('Aside Two'),
-    'footer' => t('Footer'),
   ),
 );

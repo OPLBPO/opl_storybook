@@ -10,6 +10,94 @@
 function opl_storybook_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-audio-body'.
+  $field_instances['node-audio-body'] = array(
+    'bundle' => 'audio',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'An audio file. The audio file could be used for adding music, podcasts, or audio clips to your site.',
+    'display' => array(
+      'database_vendor_help_guide' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'database_vendor_link' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resource_title_help' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'simple_grid_view' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'storybook' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'trim_length' => 600,
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'body',
+    'label' => 'Body',
+    'required' => 0,
+    'settings' => array(
+      'display_summary' => TRUE,
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => -4,
+    ),
+  );
+
   // Exported field_instance: 'node-audio-field_audio'.
   $field_instances['node-audio-field_audio'] = array(
     'bundle' => 'audio',
@@ -3657,6 +3745,7 @@ function opl_storybook_field_default_field_instances() {
   // Exported field_instance: 'taxonomy_term-storybook-field_image'.
   $field_instances['taxonomy_term-storybook-field_image'] = array(
     'bundle' => 'storybook',
+    'default_value' => array(),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -3681,7 +3770,7 @@ function opl_storybook_field_default_field_instances() {
       'default_image' => 0,
       'entity_translation_sync' => FALSE,
       'file_directory' => '',
-      'file_extensions' => 'png gif jpg jpeg',
+      'file_extensions' => 'png gif jpg jpeg svg',
       'image_field_caption' => 0,
       'max_filesize' => '',
       'max_resolution' => '',
@@ -3691,8 +3780,15 @@ function opl_storybook_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'image',
+      'module' => 'media',
       'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'image' => 'image',
+        ),
+        'browser_plugins' => array(),
         'insert' => 0,
         'insert_absolute' => 0,
         'insert_class' => '',
@@ -3709,10 +3805,6 @@ function opl_storybook_field_default_field_instances() {
           'colorbox__event_subject_for_browse' => 0,
           'colorbox__flexslider_full' => 0,
           'colorbox__flexslider_thumbnail' => 0,
-          'colorbox__juicebox_large' => 0,
-          'colorbox__juicebox_medium' => 0,
-          'colorbox__juicebox_small' => 0,
-          'colorbox__juicebox_square_thumbnail' => 0,
           'colorbox__large' => 0,
           'colorbox__media_thumbnail' => 0,
           'colorbox__medium' => 0,
@@ -3732,10 +3824,6 @@ function opl_storybook_field_default_field_instances() {
           'image_event_subject_for_browse' => 0,
           'image_flexslider_full' => 0,
           'image_flexslider_thumbnail' => 0,
-          'image_juicebox_large' => 0,
-          'image_juicebox_medium' => 0,
-          'image_juicebox_small' => 0,
-          'image_juicebox_square_thumbnail' => 0,
           'image_large' => 0,
           'image_media_thumbnail' => 0,
           'image_medium' => 0,
@@ -3749,7 +3837,7 @@ function opl_storybook_field_default_field_instances() {
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'image_image',
+      'type' => 'media_generic',
       'weight' => 33,
     ),
   );
@@ -3832,6 +3920,7 @@ function opl_storybook_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('An audio file. The audio file could be used for adding music, podcasts, or audio clips to your site.');
   t('Article Content');
   t('Audio');
   t('Audio Description');
