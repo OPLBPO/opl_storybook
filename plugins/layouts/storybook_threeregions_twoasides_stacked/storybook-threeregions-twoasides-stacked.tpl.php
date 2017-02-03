@@ -59,4 +59,14 @@
     </section>      
 
   <?php endif ?>
+
+  <?php if ($content['credits']): ?>
+
+    <section id="credits" class="oplfla-article animate-region">
+      <div class="container clearfix">
+        <?php print $content['credits']; ?>
+      </div>
+    </section>      
+
+  <?php endif ?>
 </main>
