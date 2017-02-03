@@ -166,28 +166,30 @@ function opl_storybook_block_view($delta = '') {
       }
 
       $chapterparentname = $treeterms[$chapterparentindex]->name;
-      
-      $prevchapterid = $treeterms[$chapterindex -1]->tid;
-      $prevchapterparent = $treeterms[$chapterindex -1]->parents[0];
-      $prevchaptername = $treeterms[$chapterindex -1]->name;
-      
-      $nextchapterid = $treeterms[$chapterindex +1]->tid;
-      $nextchapterparent = $treeterms[$chapterindex +1]->parents[0];
-      $nextchaptername = $treeterms[$chapterindex +1]->name;
-
-      $prevlink = l(t($prevchaptername), 'storybook/' . $chapterparentname . '/' . $prevchaptername);
-      $nextlink = l(t($nextchaptername), 'storybook/' . $chapterparentname . '/' . $nextchaptername);
-
 
       $view_prev_next_content = '';
 
-      if( isset($prevchapterid) &&  ($chapterparent == $prevchapterparent) ){
-        $view_prev_next_content .= '<div class="view-previous"><p>' . t('View Previous') . '</p><p>' . $prevlink . '</p></div>';
-      }
+      if(isset($treeterms[$chapterindex -1]) && isset($treeterms[$chapterindex -1]->parents[0])){
+        $prevchapterid = $treeterms[$chapterindex -1]->tid;
+        $prevchapterparent = $treeterms[$chapterindex -1]->parents[0];
+        $prevchaptername = $treeterms[$chapterindex -1]->name; 
 
-      if( isset($nextchapterid) &&  ($chapterparent == $nextchapterparent) ){
-        $view_prev_next_content .= '<div class="view-next"><p>' . t('View Next') . '</p><p>' . $nextlink . '</p></div>';
+        if(isset($prevchapterid) && ($chapterparent == $prevchapterparent)){
+          $prevlink = l($prevchaptername, 'storybook/' . $chapterparentname . '/' . $prevchaptername);
+          $view_prev_next_content .= '<div class="view-previous"><p>' . t('View Previous') . '</p><p>' . $prevlink . '</p></div>';
+        }
       }
+      
+      if(isset($treeterms[$chapterindex +1]) && isset($treeterms[$chapterindex +1]->parents[0])){
+        $nextchapterid = $treeterms[$chapterindex +1]->tid;
+        $nextchapterparent = $treeterms[$chapterindex +1]->parents[0];
+        $nextchaptername = $treeterms[$chapterindex +1]->name;
+
+        if(isset($nextchapterid) && ($chapterparent == $nextchapterparent)){
+          $nextlink = l($nextchaptername, 'storybook/' . $chapterparentname . '/' . $nextchaptername);
+          $view_prev_next_content .= '<div class="view-next"><p>' . t('View Next') . '</p><p>' . $nextlink . '</p></div>';
+        }
+      }  
 
       $block['content'] = $view_prev_next_content;
       break;  
