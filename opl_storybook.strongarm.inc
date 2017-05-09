@@ -630,9 +630,25 @@ function opl_storybook_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'print' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
-      'form' => array(),
+      'form' => array(
+        'locations' => array(
+          'weight' => '9',
+        ),
+        'path' => array(
+          'weight' => '10',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '8',
+        ),
+        'language' => array(
+          'weight' => '7',
+        ),
+      ),
       'display' => array(),
     ),
   );
@@ -1220,9 +1236,7 @@ function opl_storybook_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_recipe';
-  $strongarm->value = array(
-    0 => 'status',
-  );
+  $strongarm->value = array();
   $export['node_options_recipe'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -1289,7 +1303,7 @@ function opl_storybook_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_recipe';
-  $strongarm->value = '1';
+  $strongarm->value = '2';
   $export['node_preview_recipe'] = $strongarm;
 
   $strongarm = new stdClass();
