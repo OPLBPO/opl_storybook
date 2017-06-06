@@ -106,15 +106,17 @@ function opl_storybook_block_view($delta = '') {
       $path = explode('/', $path);
       $terms = taxonomy_get_term_by_name(array_pop($path));
       $term = reset($terms);
-      $termload = taxonomy_term_load($term->tid); 
+      if (!empty($term) and is_object($term)) {
+        $termload = taxonomy_term_load($term->tid); 
 
-      $field_header_image = field_view_field('taxonomy_term',$termload,'field_image',array('label'=>'hidden'));
+        $field_header_image = field_view_field('taxonomy_term',$termload,'field_image',array('label'=>'hidden'));
 
-      $chapter_img_content = '<div>';
-      $chapter_img_content .= render($field_header_image);
-      $chapter_img_content .= '</div>';
+        $chapter_img_content = '<div>';
+        $chapter_img_content .= render($field_header_image);
+        $chapter_img_content .= '</div>';
 
-      $block['content'] = $chapter_img_content;
+        $block['content'] = $chapter_img_content;
+      }
       break; 
 
     case 'chapter_title':
